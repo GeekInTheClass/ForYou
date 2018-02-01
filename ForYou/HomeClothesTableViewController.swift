@@ -58,7 +58,7 @@ class HomeClothesTableViewController: UITableViewController {
         let cloth = clothes[indexPath.row]
         
         cell.textLabel?.text = cloth.model
-        cell.detailTextLabel?.text = cloth.brand
+        cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"
         cell.imageView?.image = cloth.clothImage
         
         
