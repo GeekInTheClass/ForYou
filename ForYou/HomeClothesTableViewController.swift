@@ -63,9 +63,9 @@ class HomeClothesTableViewController: UITableViewController {
         cell.modelLabel?.text=cloth.model
         cell.priceLabel?.text = "\(cloth.price)" + " " + "￦"
         
-//        cell.textLabel?.text = cloth.model
-//        cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"
-//        cell.imageView?.image = cloth.clothImage
+//      cell.textLabel?.text = cloth.model
+//      cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"
+//      cell.imageView?.image = cloth.clothImage
                 
         return cell
     }
@@ -111,21 +111,12 @@ class HomeClothesTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
-        
-        
+
         if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
             let vc = segue.destination as? ClothesDetailViewController
             vc?.cloth = clothes[selectedRow]
-            
-            
-            
-            
         }
-        
-        
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
