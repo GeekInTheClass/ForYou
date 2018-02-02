@@ -28,10 +28,10 @@ class ClothesDetailViewController: UIViewController {
             modelDetail.text = myCloth.model
             brandDetail.text = myCloth.brand
             priceDetail.text = String(myCloth.price) + "￦"
-            
-            
+
+            self.navigationItem.title = myCloth.brand
         }
-        
+
         
         // Do any additional setup after loading the view.
     }
