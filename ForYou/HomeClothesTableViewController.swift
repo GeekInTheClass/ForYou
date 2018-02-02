@@ -51,17 +51,22 @@ class HomeClothesTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeClothes", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeClothes", for: indexPath) as! ClothTableViewCell
+        
         
         // Configure the cell...
         
         let cloth = clothes[indexPath.row]
+
+        cell.clothImage?.image=cloth.clothImage
+        cell.brandLabel?.text=cloth.brand
+        cell.modelLabel?.text=cloth.model
+        cell.priceLabel?.text = "\(cloth.price)" + " " + "￦"
         
-        cell.textLabel?.text = cloth.model
-        cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"
-        cell.imageView?.image = cloth.clothImage
-        
-        
+//        cell.textLabel?.text = cloth.model
+//        cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"
+//        cell.imageView?.image = cloth.clothImage
+                
         return cell
     }
     
