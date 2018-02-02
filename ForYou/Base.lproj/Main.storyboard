@@ -84,7 +84,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrQ-qS-lIz">
                                 <rect key="frame" x="0.0" y="241" width="414" height="438"/>
                                 <connections>
-                                    <segue destination="VN2-rn-nkB" kind="embed" id="t63-M5-YyT"/>
+                                    <segue destination="VN2-rn-nkB" kind="embed" id="LxG-lT-flg"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -387,10 +387,11 @@
                             <outlet property="delegate" destination="VN2-rn-nkB" id="pLR-ru-GW8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="M6L-6K-2fe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oh1-jK-22Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="10"/>
+            <point key="canvasLocation" x="2459" y="133"/>
         </scene>
         <!--Clothes Detail View Controller-->
         <scene sceneID="luN-jv-gkS">
@@ -400,40 +401,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-Lz-Hgd">
-                                <rect key="frame" x="65" y="367" width="263" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfF-gP-zei">
-                                <rect key="frame" x="117" y="396" width="159" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-9i-5hk">
-                                <rect key="frame" x="87" y="47" width="263" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-9i-5hk">
+                                <rect key="frame" x="20" y="11" width="374" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="XAg-Up-umf"/>
+                                    <constraint firstAttribute="height" constant="367" id="rWg-5e-xG4"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpY-qQ-dT5">
-                                <rect key="frame" x="65" y="409" width="285" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfF-gP-zei">
+                                <rect key="frame" x="251" y="447" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuV-g8-g25">
-                                <rect key="frame" x="87" y="338" width="263" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-Lz-Hgd">
+                                <rect key="frame" x="20" y="421" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuV-g8-g25">
+                                <rect key="frame" x="20" y="386" width="210" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YuV-g8-g25" firstAttribute="leading" secondItem="o5T-4g-xq7" secondAttribute="leading" constant="20" id="1r2-mg-PNq"/>
+                            <constraint firstItem="aGb-9i-5hk" firstAttribute="leading" secondItem="o5T-4g-xq7" secondAttribute="leading" constant="20" id="2KJ-e8-fWH"/>
+                            <constraint firstItem="QfF-gP-zei" firstAttribute="leading" secondItem="o5T-4g-xq7" secondAttribute="leading" constant="251" id="2be-Gb-R9w"/>
+                            <constraint firstItem="YuV-g8-g25" firstAttribute="top" secondItem="aGb-9i-5hk" secondAttribute="bottom" constant="8" id="969-jP-5m7"/>
+                            <constraint firstItem="bpi-Lz-Hgd" firstAttribute="leading" secondItem="o5T-4g-xq7" secondAttribute="leading" constant="20" id="GDh-tI-mKl"/>
+                            <constraint firstItem="o5T-4g-xq7" firstAttribute="trailing" secondItem="QfF-gP-zei" secondAttribute="trailing" constant="20" id="HNJ-bK-EL5"/>
+                            <constraint firstItem="o5T-4g-xq7" firstAttribute="trailing" secondItem="aGb-9i-5hk" secondAttribute="trailing" constant="20" id="fCS-uz-g8Y"/>
+                            <constraint firstItem="QfF-gP-zei" firstAttribute="top" secondItem="bpi-Lz-Hgd" secondAttribute="bottom" constant="8" id="hV0-aP-BOr"/>
+                            <constraint firstItem="o5T-4g-xq7" firstAttribute="trailing" secondItem="bpi-Lz-Hgd" secondAttribute="trailing" constant="20" id="iHQ-Ua-3o7"/>
+                            <constraint firstItem="bpi-Lz-Hgd" firstAttribute="top" secondItem="YuV-g8-g25" secondAttribute="bottom" constant="8" id="in8-9h-sy1"/>
+                            <constraint firstItem="o5T-4g-xq7" firstAttribute="trailing" secondItem="YuV-g8-g25" secondAttribute="trailing" constant="184" id="sDe-LA-QMw"/>
+                            <constraint firstItem="aGb-9i-5hk" firstAttribute="top" secondItem="o5T-4g-xq7" secondAttribute="top" constant="11" id="wTX-rh-DjB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o5T-4g-xq7"/>
                     </view>
                     <connections>
@@ -441,12 +449,11 @@
                         <outlet property="imageView" destination="aGb-9i-5hk" id="L7m-FC-azg"/>
                         <outlet property="modelDetail" destination="bpi-Lz-Hgd" id="2Ty-cu-ivp"/>
                         <outlet property="priceDetail" destination="QfF-gP-zei" id="bGd-9Y-wl6"/>
-                        <outlet property="urlDetail" destination="fpY-qQ-dT5" id="LOo-cd-1fL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="han-oK-9x5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2259" y="64"/>
+            <point key="canvasLocation" x="3279.7101449275365" y="132.88043478260872"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1kf-pA-GD8">

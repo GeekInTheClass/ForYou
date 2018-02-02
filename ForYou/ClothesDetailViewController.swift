@@ -27,8 +27,7 @@ class ClothesDetailViewController: UIViewController {
             imageView.image = myCloth.clothImage
             modelDetail.text = myCloth.model
             brandDetail.text = myCloth.brand
-            priceDetail.text = String(myCloth.price)
-            urlDetail.text = myCloth.url
+            priceDetail.text = String(myCloth.price) + "￦"
             
             
         }
