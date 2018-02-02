@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class cloth{
+class Cloth {
     var model:String
     var brand:String
     var price:Int
     var clothImage:UIImage
     var url:String
-
+    
     init(model:String, brand:String, price:Int, clothImage:UIImage, url:String){
         self.model=model
         self.brand=brand
@@ -24,3 +24,4 @@ class cloth{
         self.url = url
     }
 }
+
