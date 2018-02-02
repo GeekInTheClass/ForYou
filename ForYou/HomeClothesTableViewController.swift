@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HomeClothesTableViewController: UITableViewController {
     
     var clothes:[Cloth] = []
@@ -57,11 +58,20 @@ class HomeClothesTableViewController: UITableViewController {
         // Configure the cell...
         
         let cloth = clothes[indexPath.row]
-
+        func discount (discount : Int, price : Int) -> Int {
+            var discountPrice = (1-(0.01 * Double(discount))) * Double(price)
+            
+            return Int(discountPrice)
+        }
+        var rateOfDiscount = 15
+        var discountedPrice = discount(discount: rateOfDiscount, price: cloth.price)
+        
         cell.clothImage?.image=cloth.clothImage
         cell.brandLabel?.text=cloth.brand
         cell.modelLabel?.text=cloth.model
         cell.priceLabel?.text = "\(cloth.price)" + " " + "￦"
+        cell.discountPriceLabel?.text = "\(discountedPrice)" + " " + "￦"
+        cell.discountRate?.text = "\(rateOfDiscount)" + " " + "% off"
         
 //      cell.textLabel?.text = cloth.model
 //      cell.detailTextLabel?.text = "\(cloth.brand)" + "     " + "\(cloth.price)" + "￦"

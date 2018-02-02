@@ -14,6 +14,8 @@ class ClothTableViewCell: UITableViewCell {
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var discountPriceLabel: UILabel!
+    @IBOutlet weak var discountRate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

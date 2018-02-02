@@ -17,6 +17,8 @@ class ClothesDetailViewController: UIViewController {
     @IBOutlet weak var brandDetail: UILabel!
     @IBOutlet weak var priceDetail: UILabel!
     @IBOutlet weak var urlDetail: UILabel!
+    @IBOutlet weak var discountPriceDetail: UILabel!
+    @IBOutlet weak var discountRateDetail: UILabel!
     
     
     override func viewDidLoad() {
@@ -28,7 +30,18 @@ class ClothesDetailViewController: UIViewController {
             modelDetail.text = myCloth.model
             brandDetail.text = myCloth.brand
             priceDetail.text = String(myCloth.price) + "￦"
-
+            
+            func discount (discount : Int, price : Int) -> Int {
+                var discountPrice = (1-(0.01 * Double(discount))) * Double(price)
+                
+                return Int(discountPrice)
+            }
+            var rateOfDiscount = 15
+            var discountedPrice = discount(discount: rateOfDiscount, price: myCloth.price)
+            
+            discountPriceDetail.text = "\(discountedPrice)" + "￦"
+            discountRateDetail.text = "\(rateOfDiscount)" + " % off"
+            
             self.navigationItem.title = myCloth.brand
         }
 
